@@ -1,0 +1,10 @@
+.idea/
+.cache/
+Makefile
+*.a
+Testing/
+CMakeFiles/
+CMakeCache.txt
+.cmake/
+install_manifest.txt
+cmake_install.cmake
