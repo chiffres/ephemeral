@@ -1,5 +1,7 @@
 #include "Wallet.h"
 
+using namespace Ephemeral;
+
 Wallet::Wallet(std::string owner, const double balance)
     : m_balance(balance),
       m_owner(std::move(owner)),

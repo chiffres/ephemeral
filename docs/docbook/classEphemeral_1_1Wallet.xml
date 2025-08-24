@@ -1,0 +1,208 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classEphemeral_1_1Wallet" xml:lang="en-US">
+<title>Ephemeral::Wallet Class Reference</title>
+<indexterm><primary>Ephemeral::Wallet</primary></indexterm>
+<para>
+
+<para><link linkend="_classEphemeral_1_1Ephemeral">Ephemeral</link> wallet whose balance decays over time. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;Wallet.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classEphemeral_1_1Wallet_1a33ceed0e4deec6bbef11718befab8e8e">Wallet</link> (std::string owner, double balance)</para>
+
+<para>Construct a wallet with an owner and initial balance. </para>
+</listitem>
+            <listitem><para>double <link linkend="_classEphemeral_1_1Wallet_1ae70fc806cf13164bbe28e79c2ce0d181">getBalance</link> () const</para>
+
+<para>Get the current balance (read-only). </para>
+</listitem>
+            <listitem><para>void <link linkend="_classEphemeral_1_1Wallet_1a94d730f4193384caf19439a06407d45b">deposit</link> (double amount)</para>
+
+<para>Deposit funds into the wallet. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_classEphemeral_1_1Wallet_1a168080c2566c76933e9e255b4ff7192d">withdraw</link> (double amount)</para>
+
+<para>Attempt to withdraw funds from the wallet. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para><link linkend="_classEphemeral_1_1Ephemeral">Ephemeral</link> wallet whose balance decays over time. </para>
+
+
+
+<para>This wallet models a &quot;melting&quot; value system:<itemizedlist>
+<listitem>
+<para>Balance decreases continuously as time passes (entropy of money).</para>
+</listitem><listitem>
+<para>Any deposit or withdrawal first updates the balance to the current time, then applies the requested operation.</para>
+</listitem></itemizedlist>
+</para>
+
+<para>Conceptual purpose:<itemizedlist>
+<listitem>
+<para>Encourage circulation: value loses strength if it is left unused.</para>
+</listitem><listitem>
+<para>Embed the flow of time directly into the monetary object. </para>
+</listitem></itemizedlist>
+</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classEphemeral_1_1Wallet_1a33ceed0e4deec6bbef11718befab8e8e"/><section>
+    <title>Wallet()</title>
+<indexterm><primary>Wallet</primary><secondary>Ephemeral::Wallet</secondary></indexterm>
+<indexterm><primary>Ephemeral::Wallet</primary><secondary>Wallet</secondary></indexterm>
+<para><computeroutput>Wallet::Wallet (std::string owner, double balance)</computeroutput></para><para>
+
+<para>Construct a wallet with an owner and initial balance. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>owner</entry><entry>
+<para>Identifier of the wallet owner (safe string). </para>
+</entry>
+                            </row>
+                            <row>
+<entry>balance</entry><entry>
+<para>Initial balance at creation time.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                Records the current timestamp for decay tracking. </para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classEphemeral_1_1Wallet_1a94d730f4193384caf19439a06407d45b"/><section>
+    <title>deposit()</title>
+<indexterm><primary>deposit</primary><secondary>Ephemeral::Wallet</secondary></indexterm>
+<indexterm><primary>Ephemeral::Wallet</primary><secondary>deposit</secondary></indexterm>
+<para><computeroutput>void Wallet::deposit (double amount)</computeroutput></para><para>
+
+<para>Deposit funds into the wallet. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>amount</entry><entry>
+<para>Positive amount to add.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                Internally updates balance according to time decay since the last activity, then applies the deposit, and resets last_activity_timestamp.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Exceptions</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>std::invalid_argument</entry><entry>
+<para>if amount &lt; 0. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_classEphemeral_1_1Wallet_1ae70fc806cf13164bbe28e79c2ce0d181"/><section>
+    <title>getBalance()</title>
+<indexterm><primary>getBalance</primary><secondary>Ephemeral::Wallet</secondary></indexterm>
+<indexterm><primary>Ephemeral::Wallet</primary><secondary>getBalance</secondary></indexterm>
+<para><computeroutput>double Wallet::getBalance ( ) const<computeroutput>[nodiscard]</computeroutput></computeroutput></para><para>
+
+<para>Get the current balance (read-only). </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>Balance adjusted for decay up to now.</para>
+</formalpara>
+<note><title>Note</title>
+
+<para>This does not modify the internal state permanently. It queries the effective balance at the instant of the call. </para>
+</note>
+</para>
+</section>
+<anchor xml:id="_classEphemeral_1_1Wallet_1a168080c2566c76933e9e255b4ff7192d"/><section>
+    <title>withdraw()</title>
+<indexterm><primary>withdraw</primary><secondary>Ephemeral::Wallet</secondary></indexterm>
+<indexterm><primary>Ephemeral::Wallet</primary><secondary>withdraw</secondary></indexterm>
+<para><computeroutput>bool Wallet::withdraw (double amount)</computeroutput></para><para>
+
+<para>Attempt to withdraw funds from the wallet. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>amount</entry><entry>
+<para>Positive amount requested.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>True if withdrawal succeeded, false if insufficient balance.</para>
+</formalpara>
+Internally updates balance with time decay, then checks availability. If enough, subtracts and updates last_activity_timestamp. </para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+Wallet.hWallet.cpp</section>
+</section>

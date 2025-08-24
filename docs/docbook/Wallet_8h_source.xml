@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_Wallet_8h_source" xml:lang="en-US">
+<title>Wallet.h</title>
+<programlisting linenumbering="unnumbered">1 <emphasis role="preprocessor">#pragma&#32;once</emphasis>
+2 <emphasis role="preprocessor">#include&#32;&lt;ctime&gt;</emphasis>
+3 <emphasis role="preprocessor">#include&#32;&lt;cmath&gt;</emphasis>
+4 <emphasis role="preprocessor">#include&#32;&lt;string&gt;</emphasis>
+5 
+6 <emphasis role="keyword">namespace&#32;</emphasis>Ephemeral&#32;{
+22 &#32;&#32;&#32;&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_classEphemeral_1_1Wallet_1a33ceed0e4deec6bbef11718befab8e8e">Wallet</link>&#32;{
+23 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>:
+34 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classEphemeral_1_1Wallet_1a33ceed0e4deec6bbef11718befab8e8e">Wallet</link>(std::string&#32;owner,&#32;<emphasis role="keywordtype">double</emphasis>&#32;balance);
+35 
+45 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;[[nodiscard]]&#32;<emphasis role="keywordtype">double</emphasis>&#32;<link linkend="_classEphemeral_1_1Wallet_1ae70fc806cf13164bbe28e79c2ce0d181">getBalance</link>()&#32;<emphasis role="keyword">const</emphasis>;
+46 
+59 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classEphemeral_1_1Wallet_1a94d730f4193384caf19439a06407d45b">deposit</link>(<emphasis role="keywordtype">double</emphasis>&#32;amount);
+60 
+73 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_classEphemeral_1_1Wallet_1a168080c2566c76933e9e255b4ff7192d">withdraw</link>(<emphasis role="keywordtype">double</emphasis>&#32;amount);
+74 
+75 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>:
+87 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;update_balance_to_now();
+88 
+90 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">constexpr</emphasis>&#32;<emphasis role="keywordtype">double</emphasis>&#32;DECAY_RATE&#32;=&#32;0.000008;
+92 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">double</emphasis>&#32;m_balance;
+94 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::string&#32;m_owner;
+96 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;time_t&#32;m_last_activity_timestamp;
+97 &#32;&#32;&#32;&#32;};
+98 }
+</programlisting></section>

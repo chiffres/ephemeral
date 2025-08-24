@@ -1,4 +1,5 @@
 #pragma once
-
-class Ephemeral {
-};
+namespace Ephemeral {
+    class Ephemeral {
+    };
+}
