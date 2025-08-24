@@ -1,1 +1,1 @@
-[![logo](logo.png)](https://github.com/chiffres/ephemeral/wiki)
+[![logo](https://github.com/chiffres/ephemeral/raw/main/logo.png)](https://github.com/chiffres/ephemeral/wiki)
