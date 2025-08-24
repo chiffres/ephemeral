@@ -25,7 +25,11 @@
 var NAVTREE =
 [
   [ "Ephemeral", "index.html", [
-    [ "README", "md_README.html", null ],
+    [ "Ephemeral", "md_README.html", [
+      [ "Principles of Operation", "md_README.html#autotoc_md1", [
+        [ "Licence", "md_README.html#autotoc_md2", null ]
+      ] ]
+    ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],

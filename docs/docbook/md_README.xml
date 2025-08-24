@@ -1,7 +1,37 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_md_README" xml:lang="en-US">
-<title>README</title>
-<indexterm><primary>README</primary></indexterm>
+<title>Ephemeral</title>
+<indexterm><primary>Ephemeral</primary></indexterm>
 
-<para><link xlink:href="https://github.com/chiffres/ephemeral/wiki"></link> </para>
+<para><anchor xml:id="_md_README_1autotoc_md0"/></para>
+
+<para><emphasis role="bold">The Ephemeral Project</emphasis> is a radical exploration of the very essence of value. It proposes an <emphasis role="bold">anti-capitalist currency model</emphasis> whose core purpose is not accumulation, but **circulation**—to keep wealth alive, flowing, and serving the community.</para>
+
+<para>Unlike traditional currencies that can be endlessly hoarded, the Ephemeral is designed to <emphasis role="bold">mirror the cycles of the living world</emphasis>. Its fundamental rule is simple:</para>
+
+<para><blockquote>
+<para><emphasis>The wealth, which does not circulate, that ceases to serve, returns to its state of potential.</emphasis> </para>
+</blockquote></para>
+
+<para>This clear “disappearance” is not a destruction, but a <emphasis role="bold">transformation</emphasis>.</para>
+
+<para>The Ephemeral is a <emphasis role="bold">regenerative currency</emphasis>, which is not a product of accumulation, but a product of circulation.</para>
+
+<para>It is inspired by the concept of <emphasis>Fertile Silence</emphasis>: unused value evaporates, dissolving into a collective reservoir of potential, from which it can later be reborn and redistributed—like stagnant water rising into vapor, only to return as nourishing rain.</para>
+<section xml:id="_md_README_1autotoc_md1">
+<title>Principles of Operation</title>
+<para><orderedlist>
+<listitem>
+<para><emphasis role="bold">Valorisation through Flow</emphasis> Circulation is the heartbeat of the Ephemeral economy. Not only does circulating currency retain its value, but the act of exchange itself can create new value, strengthening the vitality of the whole system.</para>
+</listitem><listitem>
+<para><emphasis role="bold">Evaporation through Stagnation</emphasis> An inactive wallet sees its balance gradually decrease over time, following exponential decay. This makes long-term accumulation self-defeating: hoarding leads to evaporation.</para>
+</listitem><listitem>
+<para><emphasis role="bold">The Regenerative Cycle</emphasis> The system operates in cycles (e.g., monthly). The value that has “evaporated” is not lost—it is gathered into a collective pool, ready to be redistributed. Thus, the economy never freezes: wealth constantly circulates, evaporates, and rains back down.</para>
+</listitem></orderedlist>
+</para>
+<section xml:id="_md_README_1autotoc_md2">
+<title>Licence</title>
+<para>This project is licensed under the <emphasis role="bold">GNU Affero General Public License v3.0</emphasis>. </para>
+</section>
+</section>
 </section>
