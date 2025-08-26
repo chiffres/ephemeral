@@ -1,7 +1,7 @@
 var annotated_dup =
 [
-    [ "Ephemeral", null, [
-      [ "Ephemeral", "classEphemeral_1_1Ephemeral.html", null ],
-      [ "Wallet", "classEphemeral_1_1Wallet.html", "classEphemeral_1_1Wallet" ]
+    [ "Chiffres", null, [
+      [ "Ephemeral", "classChiffres_1_1Ephemeral.html", null ],
+      [ "Wallet", "classChiffres_1_1Wallet.html", "classChiffres_1_1Wallet" ]
     ] ]
 ];

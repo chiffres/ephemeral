@@ -6,8 +6,8 @@
     <xi:include href="md_README.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
 <chapter>
     <title>Class Documentation</title>
-    <xi:include href="classEphemeral_1_1Ephemeral.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="classEphemeral_1_1Wallet.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classChiffres_1_1Ephemeral.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classChiffres_1_1Wallet.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
 </chapter>
 <chapter>
     <title>File Documentation</title>

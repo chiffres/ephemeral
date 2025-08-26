@@ -1,0 +1,122 @@
+.TH "Chiffres::Wallet" 3 "Ephemeral" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Chiffres::Wallet \- \fBEphemeral\fP wallet whose balance decays over time\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fR#include <Wallet\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBWallet\fP (std::string owner, double balance)"
+.br
+.RI "Construct a wallet with an owner and initial balance\&. "
+.ti -1c
+.RI "double \fBgetBalance\fP () const"
+.br
+.RI "Get the current balance (read-only)\&. "
+.ti -1c
+.RI "void \fBdeposit\fP (double amount)"
+.br
+.RI "Deposit funds into the wallet\&. "
+.ti -1c
+.RI "bool \fBwithdraw\fP (double amount)"
+.br
+.RI "Attempt to withdraw funds from the wallet\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fBEphemeral\fP wallet whose balance decays over time\&. 
+
+This wallet models a "melting" value system:
+.IP "\(bu" 2
+Balance decreases continuously as time passes (entropy of money)\&.
+.IP "\(bu" 2
+Any deposit or withdrawal first updates the balance to the current time, then applies the requested operation\&.
+.PP
+
+.PP
+Conceptual purpose:
+.IP "\(bu" 2
+Encourage circulation: value loses strength if it is left unused\&.
+.IP "\(bu" 2
+Embed the flow of time directly into the monetary object\&. 
+.PP
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Wallet::Wallet (std::string owner, double balance)"
+
+.PP
+Construct a wallet with an owner and initial balance\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIowner\fP Identifier of the wallet owner (safe string)\&. 
+.br
+\fIbalance\fP Initial balance at creation time\&.
+.RE
+.PP
+Records the current timestamp for decay tracking\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void Wallet::deposit (double amount)"
+
+.PP
+Deposit funds into the wallet\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIamount\fP Positive amount to add\&.
+.RE
+.PP
+Internally updates balance according to time decay since the last activity, then applies the deposit, and resets last_activity_timestamp\&.
+
+.PP
+\fBExceptions\fP
+.RS 4
+\fIstd::invalid_argument\fP if amount < 0\&. 
+.RE
+.PP
+
+.SS "double Wallet::getBalance () const\fR [nodiscard]\fP"
+
+.PP
+Get the current balance (read-only)\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Balance adjusted for decay up to now\&.
+.RE
+.PP
+\fBNote\fP
+.RS 4
+This does not modify the internal state permanently\&. It queries the effective balance at the instant of the call\&. 
+.RE
+.PP
+
+.SS "bool Wallet::withdraw (double amount)"
+
+.PP
+Attempt to withdraw funds from the wallet\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIamount\fP Positive amount requested\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if withdrawal succeeded, false if insufficient balance\&.
+.RE
+.PP
+Internally updates balance with time decay, then checks availability\&. If enough, subtracts and updates last_activity_timestamp\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Ephemeral from the source code\&.

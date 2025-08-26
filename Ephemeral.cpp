@@ -1,3 +1,3 @@
 #include "Ephemeral.h"
 
-using namespace Ephemeral;
+using namespace Chiffres;

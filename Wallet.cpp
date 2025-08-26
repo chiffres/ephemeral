@@ -1,6 +1,6 @@
 #include "Wallet.h"
 
-using namespace Ephemeral;
+using namespace Chiffres;
 
 Wallet::Wallet(std::string owner, const double balance)
     : m_balance(balance),

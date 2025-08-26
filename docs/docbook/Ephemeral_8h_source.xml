@@ -2,8 +2,8 @@
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_Ephemeral_8h_source" xml:lang="en-US">
 <title>Ephemeral.h</title>
 <programlisting linenumbering="unnumbered">1 <emphasis role="preprocessor">#pragma&#32;once</emphasis>
-2 <emphasis role="keyword">namespace&#32;</emphasis>Ephemeral&#32;{
-3 &#32;&#32;&#32;&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_classEphemeral_1_1Ephemeral">Ephemeral</link>&#32;{
+2 <emphasis role="keyword">namespace&#32;</emphasis>Chiffres&#32;{
+3 &#32;&#32;&#32;&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_classChiffres_1_1Ephemeral">Ephemeral</link>&#32;{
 4 &#32;&#32;&#32;&#32;};
 5 }
 </programlisting></section>

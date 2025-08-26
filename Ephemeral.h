@@ -1,5 +1,5 @@
 #pragma once
-namespace Ephemeral {
+namespace Chiffres {
     class Ephemeral {
     };
 }

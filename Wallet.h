@@ -3,7 +3,7 @@
 #include <cmath>
 #include <string>
 
-namespace Ephemeral {
+namespace Chiffres {
     /**
      *
      * @class Wallet
